@@ -1,37 +1,31 @@
-#include<iostream>
-#include<string>
+#include<bits/stdc++.h>
+#define ll  long long int
+#define pb  push_back
+#define get_out return 0
+#define fast ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 using namespace std;
 int main()
 {
-    int n,i,a,d;
-    char s;
+  fast;
+   ll n;
+   cin>>n;
+   string s;
+   cin>>s;
+   ll c1=0,c2=0;
+   for(ll i=0;i<n;i++)
+   {
+   	if(s[i]=='A')
+   	  c1++;
+   	  else 
+   	  c2++;
+   }
+   if(c1>c2)
+   cout<<"Anton"<<endl;
+   else if(c1<c2)
+   cout<<"Danik"<<endl;
+   else
+   cout<<"Friendship"<<endl;
+   
 
-    while(cin>>n)
-    {
-        a=0;
-        d=0;
-
-        for(i=1;i<=n;i++)
-        {
-          cin>>s;
-          if(s=='A')
-
-              a++;
-
-          else
-
-              d++;
-
-
-        }
-        if(a>d)
-            cout<<"Anton"<<endl;
-        else if(a<d)
-            cout<<"Danik"<<endl;
-        else
-            cout<<"Friendship"<<endl;
-    }
-    return 0;
-
-
+get_out;
 }
