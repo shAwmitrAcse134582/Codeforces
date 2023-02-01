@@ -6,31 +6,24 @@
 using namespace std;
 int main()
 {
-  fast;
-  ll t; 
-  cin>>t;
-  while(t--)
-  {
-  	int n,s,r;
-  	cin>>n>>s>>r;
-  	ll x=s-r;
-  	ll sum=0;
-    
-  	ll d=r/(n-1);
-  	// cout<<d<<" ";
-  	for(ll i=0;i<n-2;i++)
-  	{
-  		cout<<d<<" ";
-  		sum+=d;
+  
+  int a=2,b=10,c;
+  for(int i=1;i<=b;i++) { 
+  	if(a> 0 && a<=3){
+  	c=b>>a;
   	}
-  	cout<<s-x-sum<<" ";
-  	cout<<x<<endl;
-  	 	
-  	
-  	
-  	
+  	 ++a;
+  if(a>2){
+  	a=a-i;
+  }
+  else 
+  b+=(c-i);
+  b--;
   	
   }
+ 
+  
+  cout << a <<" "<< b << " " << c/a << endl;
+  
 
-get_out;
 }
