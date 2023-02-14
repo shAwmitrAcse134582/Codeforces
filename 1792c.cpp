@@ -10,13 +10,17 @@ void solve()
  string s;
  cin>>s;
  ll c=s.size();
+ 
  ll a=0,b=n-1;
+ 
  while(a<=b){
  	if((s[a]=='0'&& s[b]=='1') || (s[a]=='1' && s[b]=='0'))
  	{
+ 		
  		c=c-2;
  		a++;
  		b--;
+ 		
  	}
  	else{
  		cout<<c<<endl;
@@ -26,6 +30,7 @@ void solve()
  cout<<c<<endl;
 
 }
+
 int main()
 {
 ios::sync_with_stdio(false);
