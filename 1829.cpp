@@ -11,15 +11,14 @@ ll t;
 cin>>t;
 while(t--)
 {
-    ll ans;
-    int n;
+    ll n;
     cin>>n;
-    int f=0;
-    ll mn=0;
+    ll mn=INT_MAX;
     ll mn1=INT_MAX;
     ll mn2=INT_MAX;
 
-    while(n--){
+    for(int i=0;i<n;i++)
+    {
         ll x;
         string s;
         cin>>x>>s;
@@ -27,32 +26,22 @@ while(t--)
         string b="10";
         string c="01";
        if(s==a){
-        ans=x;
+        mn=min(mn,x);
        }
        else if(s==b)
         {
-        mn1=min(x,mn1);
+        mn1=min(mn1,x);
        }
        else if(s==c){
-        mn2=min(x,mn2);
-       }
-    // else if(s=="00"){
-    //     mn++;
-    //  }
-
-    // if(mn==n){
-    //   f=1;
-    // } 
-     
+        mn2=min(mn2,x);
+       }   
 }
-
-   cout<<min(ans,(mn1+mn2))<<endl;
-
-
-   
-    
-    
-
+     int ans=min(mn,mn1+mn2);
+     if(ans>=INT_MAX)
+     cout<<-1<<endl;
+     else{
+        cout<<ans<<endl;
+     }
 
  }
     
