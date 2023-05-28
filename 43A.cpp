@@ -10,12 +10,24 @@ fast;
 ll n;
 cin>>n;
 string s;
-s[128];
-cin>>n;
-	for(int i=0; i<n; i++)
-    cin>>s[i];
-	sort(s.begin(),s.end());
-	cout<<s[n/2];
+map<string,ll>mp;
+while(n--)
+{
+   cin>>s;
+   mp[s]++;
+}
+ll mx=0;
+for(auto val:mp){
+	if(val.second>mx){
+       mx=val.second;   
+	}	
+}
+for(auto val:mp){
+	if(mx==val.second){
+		cout<<val.first<<endl;
+	}
+}
+
  
 get_out;
 }
