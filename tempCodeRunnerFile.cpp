@@ -1,1 +1,1 @@
-   cout<<st.size()<<endl;
+ //  cout<<ans<<endl; 
