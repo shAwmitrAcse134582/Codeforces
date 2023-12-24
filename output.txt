@@ -1,10 +1,5 @@
-ca
-a
-dvvv
-g
-bbb
-aaa
-ccbbb
-cc
-c
-cb
+5
+1
+9
+50
+210
