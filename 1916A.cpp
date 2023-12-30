@@ -85,43 +85,35 @@ ll digitSum(ll n)
     }
     return sum;
 }
-ll isv(char c){
-    if(c=='a' || c=='e')return 1;
-    else 
-    return 0;
-}
 int main()
 {
 fast;
 ll t;
 cin>>t;
 while(t--){
-ll n;
-cin>>n;
-string s;
-cin>>s;
-string ans="";
-reverse(s.begin(),s.end());
-for(ll i=0;i<n;){
-    if(isv(s[i])){
-      ans+=s[i];
-      ans+=s[i+1];
-      ans+='.';
-      i+=2;
-    }
-    else{
-        ans+=s[i];
-        ans+=s[i+1];
-        ans+=s[i+2];
-        ans+='.';
-        i+=3;
-
+ll n,k;
+cin>>n>>k;
+ll a[n];
+ll x=2023;
+for(ll i=0;i<n;i++){
+    cin>>a[i];
+}
+bool ok=false;
+ll mul=1;
+for(ll i=0;i<n;i++){
+    mul*=a[i];
+    if(x%mul!=0){
+        ok=true;
     }
 }
-ans.pop_back();
-reverse(ans.begin(),ans.end());
-cout<<ans<<endl;
-
+if(ok)no;
+else{
+    yes;
+    for(ll i=0;i<k-1;i++){
+        cout<<1<<" ";
+    }
+    cout<<x/mul<<endl;
+}
     
 }
 get_out;
